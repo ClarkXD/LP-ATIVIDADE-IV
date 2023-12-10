@@ -33,10 +33,11 @@ void Imprimir(struct ContaBancaria *Conta){
 int main(){
 
 setlocale(LC_ALL, "portuguese");
+    
 struct ContaBancaria Conta;
     Conta.numeroConta = 121213;
-    sprintf(Conta.nomeTitular, "Joao Silva");
-    Conta.saldo = 17578.3;
+    sprintf(Conta.nomeTitular, "Clark XD");
+    Conta.saldo = 17578.03;
     sprintf(Conta.tipoConta, "Corrente");
 
     
