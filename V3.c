@@ -3,6 +3,10 @@
 #include <string.h>
 #include <locale.h>
 
+void LimparTela(){
+    system("cls || clear");
+}
+
 struct Produto {
     char Nome[500];
     float Preco;
@@ -15,7 +19,7 @@ void realizarCompra(struct Produto *Produto, int quantidadeComprada) {
         printf("Compra realizada com sucesso!\n");
         printf("Quantidade comprada: %d\n", quantidadeComprada);
     } else if (quantidadeComprada <= 0) {
-        printf("Quantidade inv·lida para compra.\n");
+        printf("Quantidade inv√°lida para compra.\n");
     } else {
         printf("Quantidade insuficiente em estoque.\n");
     }
@@ -27,7 +31,7 @@ float calcularValorTotal(const struct Produto Produto) {
 
 void consultarEstoque(const struct Produto *Produto) {
     printf("Nome do produto: %s\n", Produto->Nome);
-    printf("PreÁo: %.2f\n", Produto->Preco);
+    printf("Pre√ßo: %.2f\n", Produto->Preco);
     printf("Quantidade em estoque: %d\n", Produto->QuantidadeEst);
     printf("Valor total em estoque: %.2f\n", calcularValorTotal(*Produto));
 }
@@ -49,8 +53,10 @@ int main() {
         printf("1 - Realizar uma compra\n");
         printf("2 - Consultar estoque\n");
         printf("3 - Sair do programa\n\n");
-        printf("Escolha a opÁ„o: ");
+        printf("Escolha a op√ß√£o: ");
         scanf("%d", &opcao);
+        
+        LimparTela();
 
         switch (opcao) {
             case 1:
@@ -65,7 +71,7 @@ int main() {
                 printf("Programa encerrado.\n");
                 break;
             default:
-                printf("OpÁ„o inv·lida.\n");
+                printf("Op√ß√£o inv√°lida.\n");
                 break;
         }
     } while (opcao != 3);
