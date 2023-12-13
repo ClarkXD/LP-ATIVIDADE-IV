@@ -15,8 +15,9 @@ struct Funcionario {
 float calcularMediaSalarial(struct Funcionario funcionarios[], char cargoAlvo[]) {
     float somaSalarios = 0;
     int contador = 0;
+    int i;
 
-    for (int i = 0; i < 5; ++i) {
+    for ( i = 0; i < 5; ++i) {
         if (strcmp(funcionarios[i].cargo, cargoAlvo) == 0) {
             somaSalarios += funcionarios[i].salario;
             contador++;
@@ -26,7 +27,7 @@ float calcularMediaSalarial(struct Funcionario funcionarios[], char cargoAlvo[])
     if (contador > 0) {
         return somaSalarios / contador;
     } else {
-        return 0.0;
+        return 0;
     }
 }
 int main(){
@@ -34,23 +35,23 @@ int main(){
     setlocale(LC_ALL, "portuguese");
 
     struct Funcionario funcionarios[5];
-
+    int i;
     
-    for (int i = 0; i < 5; ++i) {
+    for ( i = 0; i < 5; ++i) {
 
         fflush(stdin);
-        printf("Digite o nome do funcionário %d: ", i + 1);
+        printf("Digite o nome do funcionÃ¡rio %d: ", i + 1);
         gets(funcionarios[i].nome);
         fflush(stdin);
 
-        printf("Digite o cargo do funcionário %d: ", i + 1);
+        printf("Digite o cargo do funcionÃ¡rio %d: ", i + 1);
         gets(funcionarios[i].cargo);
         fflush(stdin);
 
-        printf("Digite o salário do funcionário %d: ", i + 1);
+        printf("Digite o salÃ¡rio do funcionÃ¡rio %d: ", i + 1);
         scanf("%f", &funcionarios[i].salario);
 
-        printf("\n\n");
+        
     }
 
     LimparTela();
@@ -58,7 +59,7 @@ int main(){
     char cargoAlvo[500] = "Programador";
     float mediaSalarial = calcularMediaSalarial(funcionarios, cargoAlvo);
 
-    printf("A média salarial dos programadores é: %.2f\n", mediaSalarial);
+    printf("A mÃ©dia salarial dos programadores Ã©: %.2f\n", mediaSalarial);
 
 
 
