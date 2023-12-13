@@ -38,6 +38,9 @@ int main(){
     int i;
     
     for ( i = 0; i < 5; ++i) {
+        printf("Cargos Disponiveis \n);
+        printf("Progamador \n);
+        printf("Analista \n);
 
         fflush(stdin);
         printf("Digite o nome do funcionÃ¡rio %d: ", i + 1);
