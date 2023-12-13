@@ -37,7 +37,7 @@ setlocale(LC_ALL, "portuguese");
 struct ContaBancaria Conta;
     Conta.numeroConta = 12345;
     sprintf(Conta.nomeTitular, "Clark XD");
-    Conta.saldo = 17578.03;
+    Conta.saldo = 20000.03;
     sprintf(Conta.tipoConta, "Corrente");
 
     
