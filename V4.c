@@ -37,7 +37,7 @@ setlocale(LC_ALL, "portuguese");
 struct ContaBancaria Conta;
     Conta.numeroConta = 12345;
     sprintf(Conta.nomeTitular, "Clark XD");
-    Conta.saldo = 20000.03;
+    Conta.saldo = 20000.30;
     sprintf(Conta.tipoConta, "Corrente");
 
     
@@ -46,10 +46,10 @@ struct ContaBancaria Conta;
 
     do {
         printf("\n Menu:\n");
-        printf("1- Depositar \n");
-        printf("2- Sacar \n");
-        printf("3- Imprimir Saldo \n");
-        printf("0- Sair \n");
+        printf("1 - Depositar \n");
+        printf("2 - Sacar \n");
+        printf("3 - Imprimir Saldo \n");
+        printf("0 - Sair \n");
         printf("Escolha a operacao: ");
         scanf("%d", &opcao);
 
