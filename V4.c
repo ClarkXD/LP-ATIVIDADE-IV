@@ -18,12 +18,12 @@ void sacar(struct ContaBancaria Conta, float valor) {
         printf("Saldo insuficiente para realizar o saque. \n");
     } else {
         Conta->saldo -= valor;
-        printf("Saque de %.2f realizado com sucesso.\n",valor);
+        printf("Saque de %.2f realizado com sucesso. \n",valor);
     }
 }
 void depositar(struct ContaBancaria Conta, float valor) {
     Conta->saldo += valor;
-    printf("Depósito de %.2f realizado com sucesso.\n",valor);
+    printf("Depósito de %.2f realizado com sucesso.\n", valor);
 }
 void Imprimir(struct ContaBancaria Conta){
     printf("Saldo da Conta: %.2f \n",Conta->saldo);
@@ -49,7 +49,7 @@ struct ContaBancaria Conta;
         printf("1 - Depositar \n");
         printf("2 - Sacar \n");
         printf("3 - Imprimir Saldo \n");
-        printf("0 - Sair \n");
+        printf("4 - Sair \n");
         printf("Escolha a operacao: ");
         scanf("%d", &opcao);
 
@@ -69,13 +69,13 @@ struct ContaBancaria Conta;
             case 3:
                 Imprimir(&Conta);
                 break;
-            case 0:
+            case 4:
                 printf("Saindo...\n");
                 break;
             default:
                 printf("Opcao invalida, Tente novamente.\n");
         }
-    } while (opcao != 0);
+    } while (opcao != 4);
 
 
     return 0;
