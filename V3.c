@@ -25,15 +25,12 @@ void realizarCompra(struct Produto *Produto, int quantidadeComprada) {
     }
 }
 
-float calcularValorTotal(const struct Produto Produto) {
+float calcularValorTotal(struct Produto Produto) {
     return Produto.Preco * Produto.QuantidadeEst;
 }
 
-void consultarEstoque(const struct Produto *Produto) {
-    printf("Nome do produto: %s\n", Produto->Nome);
-    printf("Preço: %.2f\n", Produto->Preco);
+void consultarEstoque(struct Produto *Produto) {
     printf("Quantidade em estoque: %d\n", Produto->QuantidadeEst);
-    printf("Valor total em estoque: %.2f\n", calcularValorTotal(*Produto));
 }
 
 int main() {
@@ -43,7 +40,7 @@ int main() {
     struct Produto Produto;
     strcpy(Produto.Nome, "Relogio CASIO");
     Produto.Preco = 160.90;
-    Produto.QuantidadeEst = 35;
+    Produto.QuantidadeEst = 57;
 
     int opcao;
     int quantidadeComprada;
