@@ -15,7 +15,7 @@ struct Aluno{
     float Media;
 };
 float calcularMedia(struct Aluno Aluno) {
-    return (Aluno.N1 + Aluno.N2) / 2.0;
+    return (Aluno.N1 + Aluno.N2) / 2;
 }
 float estaAprovado(struct Aluno Aluno) {
     return Aluno.Media >= 7.0;
