@@ -11,7 +11,7 @@ struct Contato{
     char nome[500];
     char telefone[500];
     char email[500];
-}
+};
 
 char BuscarTelefone(struct Contato Contatos[], int NumeroComtatos, char nome){
     int i;
