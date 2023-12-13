@@ -13,7 +13,7 @@ struct ContaBancaria{
     float saldo;
     char tipoConta[500];
 };
-void sacar(struct ContaBancaria *Conta, float valor) {
+void sacar(struct ContaBancaria Conta, float valor) {
     if (valor > Conta->saldo) {
         printf("Saldo insuficiente para realizar o saque. \n");
     } else {
@@ -21,11 +21,11 @@ void sacar(struct ContaBancaria *Conta, float valor) {
         printf("Saque de %.2f realizado com sucesso.\n",valor);
     }
 }
-void depositar(struct ContaBancaria *Conta, float valor) {
+void depositar(struct ContaBancaria Conta, float valor) {
     Conta->saldo += valor;
     printf("Depósito de %.2f realizado com sucesso.\n",valor);
 }
-void Imprimir(struct ContaBancaria *Conta){
+void Imprimir(struct ContaBancaria Conta){
     printf("Saldo da Conta: %.2f \n",Conta->saldo);
 }
 
@@ -35,7 +35,7 @@ int main(){
 setlocale(LC_ALL, "portuguese");
     
 struct ContaBancaria Conta;
-    Conta.numeroConta = 121213;
+    Conta.numeroConta = 12345;
     sprintf(Conta.nomeTitular, "Clark XD");
     Conta.saldo = 17578.03;
     sprintf(Conta.tipoConta, "Corrente");
